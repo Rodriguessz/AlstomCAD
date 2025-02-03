@@ -3,6 +3,7 @@ venv/
 Lib/
 Scripts/
 Include/
+pyvenv.cfg
 
 # Ignorar arquivos compilados do Python
 __pycache__/
