@@ -1,0 +1,19 @@
+# Ignorar o ambiente virtual
+venv/
+Lib/
+Scripts/
+Include/
+
+# Ignorar arquivos compilados do Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar logs e arquivos temporários
+*.log
+*.tmp
+
+# Ignorar dependências instaladas (somente manter o requirements.txt)
+*.egg-info/
+
+autocad_draws
