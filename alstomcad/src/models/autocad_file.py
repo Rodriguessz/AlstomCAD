@@ -1,7 +1,7 @@
 from pathlib import Path;
 import win32com.client
 from src.utils.helper import getRelayInfos
-
+from colorama import Fore, Back, Style
 class AutocadFile:
   def __init__(self):
     self.autocad = win32com.client.Dispatch("AutoCad.Application").ActiveDocument
@@ -9,10 +9,11 @@ class AutocadFile:
     self.file_name =  self.autocad.name
     self.file_path = self.base_dir / "autocad_draws" / self.file_name
   
-  def start(self):
+  def start(self, prev_cabs):
+     
      if not self.file_path.exists():
        raise FileNotFoundError(f"O arquivo {self.file_path} não foi encontrado.")
-     print(f"Iniciando automação para {self.file_name}")
+     print(Fore.GREEN,f"Iniciando automação para {self.file_name}")
      
      cabinets = { "08": [], "09": []}
      cab_limits = {
@@ -31,9 +32,11 @@ class AutocadFile:
                 relay = getRelayInfos(object, cab)
                 cabinets[cab].append(relay)
                 break
+      
+      
+     print(Fore.YELLOW, "Gabinets successful analised! Returning infos... ")
      
-     for i in range(len(cabinets["08"])):
-       print(cabinets["08"][i])
+     return cabinets
       
 
       

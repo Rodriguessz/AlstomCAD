@@ -4,6 +4,8 @@ class AutocadController:
   def __init__(self):
         self.autocad_file = AutocadFile();
 
-  def run(self):
+  def run(self, cabinets):
     """Método que chama a automação"""
-    self.autocad_file.start()
+    previous_cabs = self.autocad_file.start(cabinets)
+
+    return previous_cabs
