@@ -8,10 +8,8 @@ def getRelayInfos(relay, cab = "1"):
   return releyObject;
 
 def getModDate(filepath):
-  modfication_date = datetime.datetime.fromtimestamp(filepath.stat().st_mtime)
-
-  return modfication_date;
-
+      modfication_date = datetime.datetime.fromtimestamp(filepath.stat().st_mtime)
+      return modfication_date;
 
 def getDiffs(prev, new):
   diffs = {}
