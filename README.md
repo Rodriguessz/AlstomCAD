@@ -2,7 +2,7 @@
 
 ![Badge de status do projeto](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 
-AlstomCAD é uma ferramenta de automação desenvolvida para detecção de alterações em arquivos CAD e atualização automática de planilhas Excel com as alterações detectadas. Este projeto foi desenvolvido para a empresa Alstom.
+AlstomCAD é uma ferramenta de automação para detecção de alterações em arquivos CADs especificos e atualização automática de planilhas Excel com as alterações detectadas. Este projeto foi desenvolvido para facilitar o meu dia a dia na empresa Alstom.
 
 ## Protótipo
 
